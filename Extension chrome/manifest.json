@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "Extension_Mail",
+    "version": "1.0.0",
+    "description": "Extension en cours de developpement",
+    "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+        
+    ],
+    "host_permissions": [
+    "https://script.google.com/"
+  ],
+     "action":{
+        "default_popup": "Extension_Mail.html"
+    },
+    "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://script.google.com"
+  },
+    "oauth2":{  
+      "client_id":"https://script.googleapis.com/v1/scripts/AKfycbwMLfQI-buq5IqCpWQxv4CEXbBG2gJDcmvssHI8g8mNsi1AJ_AtniVU1vPl7yqFRElNxA",
+        "scopes":[  
+           "https://www.googleapis.com/auth/drive"
+        ]
+     },
+     "key":"MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDkRJTCwibtNN6tvEE3xYD93mcPySmwFs7ge/EsTR+TF7dhZb7EF8yFm34WZpeFvB/1U2YYQRHlsWsfg1foK1tH2oDWDBeVCIo+vvPvGY1pGTtX6qCyJ/yIk8PBMkCa3G37Z4b+cBw53vj5ZQPDFns59rNnoOjkwBkHMf51KjqZdhRKI4YaR4MOr87LlzTPuvcqnWd7Gngwo40FWtBqDb7XQO3+GUijzqtCbwYNQRayTv6w7IQGhJnI+0FwGGGVlc7+NLNHqKSZsFqxZL2lmlFFWTZaYxDUhTOTBWXXTtymIy1KbnslrRyouhGzWBCA+nP1/lue1bMwcHHRiLBWpyd/AgMBAAECggEAN6ixTTviGfzGPz6j+GFkLoLIRoUacSFemEYgbFjx1f/2av1QIqha6kkb2YJyd92DPWJ0hn13S7aTFEAGc0n/G+ofeBHCvkgyzVHqUOa+IF5SpgFD5azyWqsNFFKYhioxdxerRuc3OrUvqEAFRtB4g42v+Ri3MO/WKnb6QL9nQnueSX8EyAggI5O0OzG9gJPuF+52X5SRL8ZNjXGKX7hyDpT/WrsRXLAYb835DIGACPGjmDDYVACqbcJBAJxgfO27RP+/EX5UVDiLBjFAUu3phwk9OaI/14DLO5+KnWVbI7HSRptHN/PbIytujBXV3xWKfEtAr3AQksNcMOqhkvDkIQKBgQD6QSkTK5+BWyBD5v1T0W+gU2iD1sIkP7Yn1TvexKWYbjXWyAb4Ua5Kle4WsUgvADvhzMj4j9uoVVaZ0+HZMIINOBS9xoU1X6k8PO+iLFv4s4OGz++12UrBsuGFZPVXVybVkxnrOm2DrCQh77epCJ8zE4fTppllha1b08piwpVLXQKBgQDpgjJrITNxNJ7cWz7wJKfDljhw13938tufsnltjoyVSNOAkDGE7zo/e2EzoQKCJ1B+MxQX2XSdZ2SYL2IGjDHOrKMAcTlif3oG1GGFx5Pitg9KHr2JWOc5m0YPRjLvmcB107FikANge86/hQOiBk2ksShWdOxlNAXPXtf1kjxsiwKBgDZkGy1TeeN/js+zULP6/Sv3dOvSrXd7cXfO3KhaTTOIIKOB7iHifuMvGwRLm8i7YEh/Xd7IRZGcmqnsZ1XxORLucXOdxi4HkJzLEbpJseOoAJo4b30ysRDQdDut6bUF+CbLRgLePBc2PtQxadWPTiqnwAm8V/K8zyT6Ly6v5ArxAoGAOFLvVmfrwKKwrvZTeBlfXg4eDxnr5ULvNtYV9BcuUdP/MEOXrjkGE8nu6EUuFbbl84rejeIl/tGxsgO74Vhvqyp5JuIotVmKVZtk6p/5S/YeOgKwNTD8lSie/ZAxORodEk69usiCCAPVGt06wxpCIDebQz9wxfiGbj6yWMmtSYECgYEAy1GBqtiq1GVdCP8pzSKCdTZDWb78XcWCjY6nK1at2AgicBms26ogf3fw91/rGQJyzMAeuVqXuIpX1DRNQbACLRfgbbAHTj5EpFQowuOGMdydhvZBZSGVr0foiIJhjmlaylEs+b61hC4RczX2LLnSfBtACmdxQmmMD1lQKIGW0OM="
+}
